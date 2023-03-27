@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int kor, eng, mat;
+	float sum = 0;
+	float Average;
+	
+	
+	cout << "국영수 점수 입력 :" << endl;
+	cin >> kor >> eng >> mat;
+
+    sum = kor + eng + mat;
+
+    Average = sum / 3;
+
+
+	cout << "합계 :" << sum << endl;
+	cout << "평균 :" << Average << endl;
+
+
+}

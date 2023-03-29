@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int H;
+	int M;
+	
+	cout << "상근이가 설정한 알람 시각 : ";
+	cin >> H >> M;
+	
+	M -= 45;
+	
+	if(M < 0)
+	{
+	    H--;
+	    M +=60;
+	}
+	if(H<0)
+	{
+	    H +=24;
+	}
+	
+	cout << H << "시" << M << "분" << endl;
+	
+	return 0;
+
+}

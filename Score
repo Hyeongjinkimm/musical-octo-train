@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int Score;
+
+    cout << "시험 점수를 입력하세요: ";
+    cin >> Score;
+
+    if (Score >= 90 && Score <= 100)
+    {
+        cout << "A" << endl;
+    }
+    else if (Score >= 80 && Score < 90)
+    {
+        cout << "B" << endl;
+    }
+    else if (Score >= 70 && Score < 80)
+    {
+        cout << "C" << endl;
+    }
+    else if (Score >= 60 && Score < 70)
+    {
+        cout << "D" << endl;
+    }
+    else {
+        cout << "F" << endl;
+    }
+    return 0;
+    
+}

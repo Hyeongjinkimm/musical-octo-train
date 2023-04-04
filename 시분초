@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class ConvertSecond
+{
+private:
+	int Second;
+	int Minute;
+	int Hour;
+
+public:
+	ConvertSecond() : Second(0), Minute(0), Hour(0) {}
+	void setData()
+	{
+		cout << "시(hour) 입력: " << endl;
+		cin >> Hour;
+		cout << "분(minute) 입력: " << endl;
+		cin >> Minute;
+		cout << "초(second) 입력: " << endl;
+		cin >> Second;
+	}
+
+	int getResult()
+	{
+		int i;
+		int o;
+		int p;
+		int add;
+
+		i = Hour * 3600;
+		o = Minute * 60;
+		p = Second;
+
+		add = i + o + p;
+		
+		return add;
+
+	}
+
+};
+
+
+int main() {
+	
+	ConvertSecond a;
+	a.setData();
+	cout << "입력하신 시간은 총 " << a.getResult() << " 초 입니다." << endl;
+	
+	ConvertSecond b;
+	cout << "기본 시간은 총 " << b.getResult() << " 초 입니다." << endl;
+}

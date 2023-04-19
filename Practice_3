@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+class Circle{
+    int radius;
+    public:
+      Circle(int r){radius = r;}
+    double getArea(){ return 3.14159*radius*radius; }
+    double getCircustance(){ return 3.14159*2*radius; }
+};
+     
+
+     
+int main()
+{
+    Circle cArr[5]={1,5,10,15,20};
+    for(int i=0; i<5; i++)
+    {
+      cout<<"Cicle"<<i<<"의 면적은 "<<cArr[i].getArea();
+     
+      cout<<" 둘레는 "<<cArr[i].getCircustance()<<endl;
+    }
+   
+}

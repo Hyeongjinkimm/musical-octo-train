@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+
+void myswap(T &x,T &y,T &z)
+{
+    T tmp;
+    tmp = x;
+    x=y;
+    y=z;
+    z=tmp;
+}
+
+int main()
+{
+    int x ,y, z;
+    cout << "세 정수 입력: " ;
+    cin>>x>>y>>z;
+       
+    myswap(x,y,z);
+    cout << "a: " << x << " " << "b: " << y << " " << "c: " << z << endl;
+   
+    double X,Y,Z;
+    cout << "세 실수 입력: ";
+    cin >> X >> Y >> Z;
+   
+    myswap(X,Y,Z);
+    cout << "d: " << X << " " << "e: " << Y << " " << "f: " << Z << endl;
+   
+    return 0;
+}

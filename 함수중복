@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int arr_plus(int arr[], int a)
+{
+	int sum = 0;
+	for (int i = 0; i < a; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+
+double arr_plus(double arr[], int a)
+{
+	double sum = 0;
+	for (int i = 0; i < a; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+
+
+int main()
+{
+	int iarr[] = { 1,2,3,4,5 };
+	double darr[] = { 1.1, 2.2, 3.3 };
+
+	cout << "정수배열 합은 " << arr_plus(iarr, 5) << endl;
+	cout << "실수배열 합은 " << arr_plus(darr, 3) << endl;
+
+}

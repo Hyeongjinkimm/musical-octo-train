@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	ifstream fin("a.txt");
+	ofstream fout("b.txt");
+	if (!fin || !fout)
+	{
+		cerr << "파일을 열 수가 없어요";
+		return 0;
+	}
+
+	string n;
+	getline(fin, n,'&');
+    fin.ignore();
+
+	string f, r;
+
+	cout << "find: ";
+	getline(cin, f);
+	
+	cout << "replace: ";
+	getline(cin, r);
+
+	int sindex = 0;
+	while (true)
+	{
+		int findex = n.find(f, sindex);
+		if (findex == -1)
+		{
+			break;
+		}
+		n.replace(findex, f.length(), r);
+		sindex = findex + r.length();
+	}
+
+	fout << n << endl;
+	fin.close();
+	fout.close();
+
+}

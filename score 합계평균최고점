@@ -1,0 +1,55 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	ifstream fin("score.txt");
+	if (!fin)
+	{
+		cerr << "파일을 열 수가 없어요";
+		return 0;
+	}
+
+	double sum = 0;
+	double a1 = 0;
+	double HighestScore = 0;
+	
+	
+	string name, High_N;
+
+	for(int i = 0; i < 31; i++)
+	{
+		fin >> name >> a1;
+		if (a1 >= HighestScore)
+		{
+			HighestScore = a1;
+			High_N = name;
+		}
+		sum += a1;
+		
+	}
+
+
+	ofstream fout("result.txt");
+	if (!fout)
+	{
+		cerr << "파일을 열 수가 없어요";
+		return 0;
+	}
+
+	fout << fixed;
+	fout.precision(2);
+
+	fout << "합계: " << sum << endl;
+	fout << "평균: " << sum / 31 << endl;
+	fout << "최고점: " << High_N << " " << HighestScore << endl;
+	
+	cout << "result.txt를 확인하세요 \n";
+	
+	fin.close();
+	fout.close();
+
+	return 0;
+}

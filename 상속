@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Circle { 
+   public:
+	   int radius;
+	   double Volume() {
+		   return (4.0 / 3.0) * 3.141592 * radius * radius *radius;
+	   } 
+};
+
+class Circumference : public Circle {
+   public:
+	   double L() {
+		   return 2 * 3.141592 * radius;
+	   }
+};
+
+int main() {
+
+	int radius;
+	cout << "반지름을 입력: ";
+	cin >> radius;
+	
+	Circumference circle;
+	circle.radius = radius;
+	cout << "구의 부피는 " << circle.Volume() << " 입니다." << endl;
+	cout << "원의 둘레는 " << circle.L() << " 입니다." << endl;
+
+	return 0;
+}

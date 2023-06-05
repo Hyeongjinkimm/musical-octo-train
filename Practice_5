@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() 
+{
+	char source[] = "source.txt";
+	ifstream fin(source);
+	if (!fin)
+	{
+		cerr << "file open failed";
+		return 0;
+	}
+
+	int count = 0;
+	int c;
+	while ((c = fin.get()) != EOF) // !fin.eof()로 표현해도 상관없다.
+	{
+		cout << (char)c;
+		count++;
+	}
+
+	cout << endl;
+	cout << "----------------" << endl;
+	cout << "읽은 바이트 수는 " << count << endl;
+	fin.close();
+}

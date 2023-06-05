@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+
+	ofstream file;
+	file.open("source.txt", ios::out | ios::app); // ofstream file ("source.txt", ios::out);
+	if (file.is_open())
+	{
+		file << "\n첼시 우승 가보자";
+    file.close();
+		cout << "Added to the file" << endl;
+	}
+	else
+	{
+		cout << "Append to file failed" << endl;
+	}
+	return 0;
+}

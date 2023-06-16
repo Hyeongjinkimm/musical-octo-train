@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int iarr[] = { 10, 100, -5, 7, 77 };
+	double darr[] = { 3.14, 9.9, 0.0005 };
+	string sarr[] = { "딸기","바나나","우유" };
+
+	for (int a : iarr)
+	{
+		cout << a << ' ';
+	}
+	cout << endl;
+
+	for (double d : darr)
+	{
+		cout << d << ' ';
+	}
+	cout << endl;
+	
+	for(string s : sarr) cout << s << ' ';
+	cout << endl;
+}

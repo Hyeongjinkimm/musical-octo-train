@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+template<class T>
+T arr_plus(T arr[], int size)
+{
+	T sum = 0;
+	for (int i = 0; i < size; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+
+
+int main() {
+	int iarr[] = { 1,2,3,4,5 };
+	double darr[] = { 1.1, 2.2, 3.3 };
+	cout << "정수배열 합은 " << arr_plus(iarr, 5) << endl; // 배열명, 배열길이
+	cout << "실수배열 합은 " << arr_plus(darr, 3) << endl;
+}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+    int iarr[]={1,2,3,4,5};
+    double darr[]={1.1,2.2,3.3};
+    string sarr[]={"딸기","바나나","우유"};
+   
+    T arr_plus(T arr[], int n)
+    {
+        T sum = arr[o];
+        for(int i=1; i<n;i++)
+        {
+            sum += arr[i];
+            return sum;
+        }
+    }
+   
+   
+    int arr_plus(int iarr[],int n)
+    {
+       
+    int sum = 0;
+    for(int i=0; i<5;i++)
+    {
+        sum += iarr[i];
+        return sum;
+    }
+   
+    }
+   
+   
+    cout <<"정수배열 합은 " << arr_plus(iarr,5) << endl;
+    cout <<"실수배열 합은 " << arr_plus(darr,3) << endl;
+    cout <<"string배열 합은 " << arr_plus(sarr,3) << endl;
+   
+}

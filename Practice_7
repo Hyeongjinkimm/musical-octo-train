@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int bigger(int x, int y) {
+return (x > y) ? x : y;
+}
+double bigger(double x, double y) {
+return (x > y) ? x : y;
+}
+template<class T>
+T bigger(T a, T b) {
+	if (a > b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+} // 위 두개는 의미가 같다
+
+int main() {
+int a, b;
+cout << "두 정수 입력: ";
+cin >> a >> b;
+cout << "큰 정수는 " << bigger(a, b) << endl << endl;
+double c, d;
+cout << "두 실수 입력: ";
+cin >> c >> d;
+cout << "큰 실수는 " << bigger(c, d) << endl << endl;
+}
